@@ -43,15 +43,26 @@ namespace DeclaringVariables
 
 
             int x = 7;
-            string y = "Olivia";
+            //string y = "Olivia";
+            string y = "5";
             string myFirstTry = x.ToString() + y;
             // How can int 7 be treated as a string to combine with another?
             // Plus sign is a "string concatination operator" (concatinate or add depending on situation)
 
+            //int mySecondTry = x + y;
+            // a data conversion can not reliably found from string to int
+            // Explicit conversion: we will write the code to perform the data conversion
+
+
+            int mySecondTry = x + int.Parse(y);
+            // "Olivia" can't be converted into a number, so it fails
+            // Explicitly convert data types (rather than implicit), less brittle application
+
+
+
             Console.WriteLine(myFirstTry);
 
-
-
+            //Console.WriteLine(mySecondTry);
 
 
 
